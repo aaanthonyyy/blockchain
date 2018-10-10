@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace firstApp
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+            int counter = 0;
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Tutorial_Click(object sender, RoutedEventArgs e)
+        {
+            counter += 1;
+            string str = input.Text;
+            hash.Text = str + counter;
+        }
+
+        private void Generate_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            string rnd = rand.Next(999999999).ToString()+rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString();
+            string str = rnd.ToString();
+            hash.Text = rnd;
+        }
+    }
+}

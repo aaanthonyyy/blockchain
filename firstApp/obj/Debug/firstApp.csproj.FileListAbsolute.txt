@@ -1,0 +1,16 @@
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\bin\Debug\firstApp.exe
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\bin\Debug\firstApp.pdb
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\MainWindow.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\App.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp_MarkupCompile.cache
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp_MarkupCompile.lref
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\MainWindow.baml
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.g.resources
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.Properties.Resources.resources
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.csproj.GenerateResource.cache
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.csproj.CoreCompileInputs.cache
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.exe
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.pdb
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.csprojAssemblyReference.cache
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\tut1.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\tut1.baml
