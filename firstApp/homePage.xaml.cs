@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace firstApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for homePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomePage : Page
     {
-        public MainWindow()
+        public HomePage()
         {
             InitializeComponent();
         }
@@ -29,13 +29,12 @@ namespace firstApp
             Random rand = new Random();
             string rnd = rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString();
             string str = rnd.ToString();
-            hash.Text = rnd;
+            //hash.Text = rnd;
         }
 
         private void Tutorial_Click(object sender, RoutedEventArgs e)
         {
-            tutorialScreens.Content = new PageOne();
+            //tutorialScreens.Content = new PageOne();
         }
-
     }
 }

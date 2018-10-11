@@ -12,5 +12,7 @@ C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debu
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.exe
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.pdb
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.csprojAssemblyReference.cache
-C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\tut1.g.cs
-C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\tut1.baml
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\homePage.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\homePage.baml
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageOne.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageOne.baml

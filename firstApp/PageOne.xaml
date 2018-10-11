@@ -1,0 +1,30 @@
+﻿<Page x:Class="firstApp.PageOne"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:firstApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="700"
+      Title="PageOne">
+
+    <Grid Background="White">
+
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height ="*"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock x:Name="append" Grid.Column="2" Grid.Row="0"
+				   Text="1" Foreground="Black" FontSize="24"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center" 
+				   FontWeight="Bold"
+				   />
+		
+	</Grid>
+</Page>
