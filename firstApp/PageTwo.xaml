@@ -1,15 +1,14 @@
-﻿<Page x:Class="firstApp.PageOne"
+﻿<Page x:Class="firstApp.PageTwo"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:firstApp"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="700"
-      Title="PageOne">
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageTwo">
 
-	<Grid Background="WhiteSmoke">
-
+    <Grid Background="WhiteSmoke">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
@@ -21,7 +20,7 @@
 
 		<!--Image Source="resources\StepOne.jpg" Margin="35" Stretch="Uniform"/-->
 
-		<TextBlock Text="Step 1" HorizontalAlignment="Center" FontSize="35" FontWeight="Black"
+		<TextBlock Text="Step 2" HorizontalAlignment="Center" FontSize="35" FontWeight="Black"
 				   Margin="30" VerticalAlignment="Top"/>
 
 		<Grid>
@@ -34,15 +33,13 @@
 				<RowDefinition Height="2*"/>
 			</Grid.RowDefinitions>
 
-			<TextBlock x:Name="InputData" Grid.Row="1" 
-					   Text="The first step converts each character to ascii"
-					   Background="#FFE6E6E6"
-					   Foreground="#FF19384D"
-					   Padding="40"
+			<TextBlock x:Name="InputData" Grid.Row="1" Text="The first step converts each character to ascii"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Top"
-					   FontSize="20"
-			/>
+					   Background="#FFE6E6E6"
+					   Padding="50"
+					   FontSize="25" Foreground="#FF19384D"/>
+
 		</Grid>
 
 		<WrapPanel x:Name="StepOne" 
@@ -58,7 +55,7 @@
 					   VerticalAlignment="Center" 
 					   TextAlignment="Center"
 					   FontWeight="Bold" TextWrapping="Wrap"
-			/>
+					   />
 
 			<TextBlock x:Name="Append"
 					   Grid.Column="0"
@@ -69,7 +66,7 @@
 					   VerticalAlignment="Center"
 					   TextAlignment="Center"
 					   FontWeight="Bold" TextWrapping="Wrap"
-			/>
+					   />
 		</WrapPanel>
 
 		<Grid Margin="30" Grid.Row="1">
@@ -89,23 +86,19 @@
 						FontSize="28" FontFamily="Champagne &amp; Limousines" 
 						Foreground="White" 
 						Cursor="Hand"
-				Background="#FF234F6E" BorderBrush="#FF1F445F" Click="Back_Click"
-			/>
+				Background="#FF234F6E" BorderBrush="#FF1F445F" Click="Back_Click"/>
 
 			<Button Content="Next" 
-					x:Name="Next"
-					Grid.Column="3"
-					HorizontalAlignment="Center" 
-					VerticalAlignment="Bottom" 
-					Width="128" 
-					FontSize="28" FontFamily="Champagne &amp; Limousines" 
-					TextOptions.TextHintingMode="Animated" 
-					Foreground="White" 
-					Cursor="Hand"
-					Background="#FF234F6E" 
-					BorderThickness="1" BorderBrush="#FF1F445F" 
-					Click="Next_Click"
-			/>
+				x:Name="Next"
+				 Grid.Column="3"
+				HorizontalAlignment="Center" 
+				VerticalAlignment="Bottom" 
+				Width="128" 
+				FontSize="28" FontFamily="Champagne &amp; Limousines" 
+				TextOptions.TextHintingMode="Animated" 
+				Foreground="White" 
+				Cursor="Hand"
+				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" Click="Next_Click" IsHitTestVisible="True"/>
 		</Grid>
 	</Grid>
 </Page>

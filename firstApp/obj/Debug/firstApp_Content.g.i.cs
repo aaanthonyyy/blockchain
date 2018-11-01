@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/unlock.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/home.png")]
 
 

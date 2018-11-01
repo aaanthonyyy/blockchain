@@ -5,170 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:firstApp"
         mc:Ignorable="d"
-        Title="SHA-256 Encryption" 
+        Title="SHA-256 Encryption"
 		ResizeMode="CanResizeWithGrip"
 		Icon="/resources/Unlock.ico"
-		Height="450" Width="1000" 
-		MinHeight="450" MinWidth="850"
+		Height="450" Width="950" 
+		MinHeight="450" MinWidth="850" Loaded="Window_Loaded"
 		>
 
-	<Grid>
+	<Grid Background="WhiteSmoke">
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="36" MaxWidth="320"/>
-			<ColumnDefinition Width="284"/>
-			<ColumnDefinition Width="173*"/>
-			<ColumnDefinition Width="auto"/>
-			<ColumnDefinition Width="69*"/>
-			<ColumnDefinition Width="auto"/>
-			<ColumnDefinition Width="174*"/>
+			<ColumnDefinition Width="300"/>
+			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="155*"/>
+			<RowDefinition Height="120*"/>
 			<RowDefinition Height="158*"/>
 			<RowDefinition Height="auto"/>
-			<RowDefinition Height="24*"/>
 		</Grid.RowDefinitions>
 
-		<Frame x:Name="tutorialScreens" Grid.Column="2" Grid.ColumnSpan="5"
-			   Grid.Row="0" Grid.RowSpan="5"
+		<Frame x:Name="tutorialScreens" Grid.Column="1"
+			   Grid.Row="0" Grid.RowSpan="3" NavigationUIVisibility="Hidden"
 			   />
-		
-		<Button Content="Tutorial" Grid.Column="3" Grid.Row="3" 
-				x:Name="Tutorial"
-				HorizontalAlignment="Center" 
-				VerticalAlignment="Bottom" 
-				Width="128" 
-				FontSize="28" FontFamily="Champagne &amp; Limousines" 
-				TextOptions.TextHintingMode="Animated" 
-				Foreground="White" 
-				Cursor="Hand"
-				Background="#FF234F6E" BorderBrush="#FF1F445F" Click="Tutorial_Click"/>
-
-		<Button Content="Generate" 
-				x:Name="Generate"
-				Grid.Column="5" Grid.Row="3" 
-				HorizontalAlignment="Center" 
-				VerticalAlignment="Bottom" 
-				Width="128" 
-				FontSize="28" FontFamily="Champagne &amp; Limousines" 
-				TextOptions.TextHintingMode="Animated" 
-				Foreground="White" 
-				Cursor="Hand"
-				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" 
-				Click="Generate_Click">
-		</Button>
 
 		<Rectangle Grid.Column="0" 
 				   Grid.Row="1"
 				   Grid.RowSpan="4"
-				   Fill="#FF234F6E" Grid.ColumnSpan="2"/>
+				   Fill="#FF234F6E" Grid.ColumnSpan="1"/>
 
 		<Rectangle Grid.Column="0"
 				   Grid.Row="0"
-				   Fill="#FF163042" Grid.ColumnSpan="2"
-				   />
-
-		<TextBlock Text="SHA 256" 
-				   FontFamily="Geometry Soft Pro N" 
-				   FontSize="34" 
-				   Foreground="White" 
-				   FontWeight="Bold"
-				   HorizontalAlignment="Center"
-				   VerticalAlignment="Center" Margin="58,6,94,5" Grid.Column="1"
+				   Fill="#FF163042" Grid.ColumnSpan="1"
 				   />
 		<Image Source="resources/binary_imageview.png"
 			   Grid.Row="1"
 			   Grid.RowSpan="4" 
 			   VerticalAlignment="Bottom"
 			   MinWidth="200"
-			   Stretch="None" Grid.ColumnSpan="2"
+			   Stretch="None" Grid.ColumnSpan="1"
 			   />
 
-		<Rectangle Grid.Column="0"
+		<!--Rectangle Grid.Column="0"
 				   Grid.Row="2"
 				   Fill="#FF163042"
 				   Margin="35,10,40,10" Opacity="0.40"
 				   Height="150"
 				   MinHeight="120" Grid.ColumnSpan="2"
 				   Grid.RowSpan="1"   
-				   />
+				   /-->
 
-		<TextBlock Grid.Column="1"
-				   Grid.Row="2"
+		<TextBlock x:Name="TutorialText" Grid.Column="0"  Grid.Row="2"
+				   Background="#7F163042"
 				   Text="To view a tutorial of each step of the conversion process click Tutorial." 
 				   Foreground="#BFFFFFFF" 
 				   FontFamily="Roboto Light" 
 				   FontSize="18" 
 				   TextWrapping="WrapWithOverflow"
-				   LineHeight="30" Margin="4,34,45,34" TextAlignment="Center"
-				   VerticalAlignment="Center"
-				   />
-
-		<TextBox x:Name="input"
-				 Grid.Column="2"
-				 Grid.ColumnSpan="5"
-				 Grid.RowSpan="2"
-				 Grid.Row="1" TextWrapping="Wrap" 
-				 Text="EnterTextHere" 
-				 Margin="60,136,60,137"
-				 Height="40"
-				 FontFamily="Roboto" MaxLength="55" IsUndoEnabled="True" 
-				 MaxLines="10" BorderThickness="0" 
-				 Background="#FFECECEC" 
-				 BorderBrush="#FF234F6E"
-				 FontSize="16"
-				 TextAlignment="Center"
-				 VerticalAlignment="Center" Foreground="#FF436074"
-				 VerticalContentAlignment="Center"
-				 />
-		<StackPanel Grid.Column="2" Grid.ColumnSpan="5"
-				   Grid.Row="2" HorizontalAlignment="Stretch"
-				   VerticalAlignment="Center" Margin="0,27"
-				   >
-
-			<TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3"
-				   Text="SHA-256 HASH: " 
+				   LineHeight="30" Margin="30 0 30 30" 
 				   TextAlignment="Center"
-				   HorizontalAlignment="Center"
-				   VerticalAlignment="Center" FontFamily="Roboto" 
-				   FontWeight="Normal" TextWrapping="WrapWithOverflow"
-				   Margin="0,35,0,50"
-				   FontSize="16"
+				   VerticalAlignment="Top"
+				   Padding="20"
 				   />
 
-			<TextBlock x:Name="hash" 
-				   Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5"
-				   Text="B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9" 
-				   TextAlignment="Center"
-				   VerticalAlignment="Center" FontFamily="Roboto" 
-				   FontWeight="Bold" TextWrapping="Wrap"
-				   FontSize="16" Margin="0,-50,0,0"
-				   />
+		<Button x:Name="Home" Grid.Column="0" Grid.ColumnSpan="1"
+			 Background="#00DDDDDD" Foreground="White"
+					FontSize="24" FontWeight="Bold" Cursor="Hand" Click="Home_Click" BorderBrush="#00707070"
+					>
+			<StackPanel Grid.ColumnSpan="1" Orientation="Horizontal" HorizontalAlignment="Center">
+				<Image Source="/resources/home.png" MaxHeight="20" Margin="5" Cursor="Hand"/>
+				<TextBlock Text="SHA 256"/>
+			</StackPanel>
+		</Button>
 
-		</StackPanel>
-		<Image Grid.ColumnSpan="5" 
-			   Source="/Resources/sha256.png"
-			   Grid.Column="2" 
-			   Margin="60,20,60,50"
-			   VerticalAlignment="Center"
-			   Grid.Row="0"
-			   Grid.RowSpan="2"
-			   MinWidth="200"
-			   Stretch="Fill"/>
-		
-		<TextBlock Grid.Column="0"
+		<TextBlock x:Name="MainText" Grid.Column="0"
 				   Grid.Row="1"
-				   Text="To obtain a 32-bit hash, enter any string of characters less than 55 characters in length without any spaces." 
+				   Text="To obtain a 32-bit hash, enter any string of characters less than 55 characters in length." 
 				   Foreground="#BFFFFFFF" 
 				   FontFamily="Roboto Light" 
 				   FontSize="18" 
 				   TextWrapping="WrapWithOverflow"
-				   LineHeight="30" Margin="30,20,39,15" TextAlignment="Center" Grid.ColumnSpan="2"
+				   LineHeight="30" TextAlignment="Center"
+				   VerticalAlignment="Top"
+				   
+				   Padding="30"
 				   />
-		
-		
-
 	</Grid>
 </Window>

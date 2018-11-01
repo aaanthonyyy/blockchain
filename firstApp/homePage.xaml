@@ -8,7 +8,95 @@
       d:DesignHeight="450" d:DesignWidth="700"
       Title="homePage">
 
-    <Grid>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="185*"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="74*"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="186*"/>
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="170*"/>
+			<RowDefinition Height="158*"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="24*"/>
+		</Grid.RowDefinitions>
+
+		<Button Content="Generate" 
+				x:Name="Generate"
+				Grid.Column="1" Grid.Row="3" 
+				HorizontalAlignment="Center" 
+				VerticalAlignment="Bottom" 
+				Width="128" 
+				FontSize="28" FontFamily="Champagne &amp; Limousines" 
+				TextOptions.TextHintingMode="Animated" 
+				Foreground="White" 
+				Cursor="Hand"
+				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" Click="Generate_Click"/>
+
+		<Button Content="Tutorial" Grid.Column="3" Grid.Row="3" 
+				x:Name="Tutorial"
+				HorizontalAlignment="Center" 
+				VerticalAlignment="Bottom" 
+				Width="128" 
+				FontSize="28" FontFamily="Champagne &amp; Limousines" 
+				TextOptions.TextHintingMode="Animated" 
+				Foreground="White" 
+				Cursor="Hand"
+				Background="#FF234F6E" BorderBrush="#FF1F445F" Click="Tutorial_Click"/>
+
+		<TextBox x:Name="Input"
+				 Grid.ColumnSpan="5"
+				 
+				 Grid.Row="2" TextWrapping="Wrap" 
+				 Text="EnterTextHere" 
+				 Margin="60,0,60,0"
+				 Height="40"
+				 FontFamily="Roboto" MaxLength="55" IsUndoEnabled="True" 
+				 MaxLines="10" BorderThickness="0" 
+				 Background="#FFEEEEEE" 
+				 BorderBrush="#FF234F6E"
+				 FontSize="16"
+				 TextAlignment="Center"
+				 VerticalAlignment="Top" Foreground="#FF436074"
+				 VerticalContentAlignment="Center" TextChanged="Input_TextChanged"
+				 />
 		
+		<StackPanel Grid.ColumnSpan="5"
+				   Grid.Row="2" HorizontalAlignment="Stretch"
+				   VerticalAlignment="Center" Margin="0,27"
+				   >
+
+			<TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3"
+				   Text="SHA-256 HASH: " 
+				   TextAlignment="Center"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center" FontFamily="Roboto" 
+				   FontWeight="Normal" TextWrapping="WrapWithOverflow"
+				   Margin="0,35,0,50"
+				   FontSize="16"
+				   />
+
+			<TextBlock x:Name="hash" 
+				   Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5"
+				   Text="B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9" 
+				   TextAlignment="Center"
+				   VerticalAlignment="Center" 
+				   FontWeight="Bold" TextWrapping="Wrap"
+				   FontSize="16" Margin="0,-50,0,0"
+				   />
+
+		</StackPanel>
+		<Image Grid.ColumnSpan="5" 
+			   Source="/Resources/sha256.png" 
+			   Margin="60,20,60,30"
+			   VerticalAlignment="Center"
+			   Grid.Row="0"
+			   Grid.RowSpan="2"
+			   MinWidth="200"
+			   Stretch="Fill" MinHeight="144" MaxHeight="250"/>
 	</Grid>
 </Page>

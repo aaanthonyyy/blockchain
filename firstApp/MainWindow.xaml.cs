@@ -21,21 +21,22 @@ namespace firstApp
     {
         public MainWindow()
         {
+            
             InitializeComponent();
+            HomePage homePage = new HomePage();
+            tutorialScreens.NavigationService.Navigate(homePage);
         }
 
-        private void Generate_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Random rand = new Random();
-            string rnd = rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString();
-            string str = rnd.ToString();
-            hash.Text = rnd;
+           // Input_TextChanged(Input.Text, null);
         }
 
-        private void Tutorial_Click(object sender, RoutedEventArgs e)
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
-            tutorialScreens.Content = new PageOne();
-        }
+            HomePage homePage = new HomePage();
 
+            tutorialScreens.NavigationService.Navigate(homePage);
+        }
     }
 }

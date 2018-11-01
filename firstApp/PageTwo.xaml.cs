@@ -15,32 +15,25 @@ using System.Windows.Shapes;
 namespace firstApp
 {
     /// <summary>
-    /// Interaction logic for tut1.xaml
+    /// Interaction logic for PageTwo.xaml
     /// </summary>
-    public partial class PageOne : Page
+    public partial class PageTwo : Page
     {
-        public PageOne()
+        public PageTwo()
         {
             InitializeComponent();
-            //Append.Foreground = Brushes.Red;
-        }
-
-        internal new static void RequestBringIntoViewEvent()
-        {
-            //throw new NotImplementedException();
+            Next.Visibility = Visibility.Hidden;
+            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
-
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            PageTwo pageTwo = new PageTwo();
-            NavigationService.Navigate(pageTwo);
-
         }
+
     }
 }

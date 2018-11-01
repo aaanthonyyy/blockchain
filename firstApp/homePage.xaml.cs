@@ -29,12 +29,20 @@ namespace firstApp
             Random rand = new Random();
             string rnd = rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString();
             string str = rnd.ToString();
-            //hash.Text = rnd;
+            hash.Text = str;
         }
 
         private void Tutorial_Click(object sender, RoutedEventArgs e)
         {
-            //tutorialScreens.Content = new PageOne();
+            PageOne pageOne = new PageOne();
+            NavigationService.Navigate(pageOne);
+                        
+        }
+
+        private void Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (hash == null) return;
+            Generate_Click(null, null);
         }
     }
 }
