@@ -19,10 +19,10 @@ namespace firstApp
     /// </summary>
     public partial class PageOne : Page
     {
-        public PageOne()
+        public PageOne(string str)
         {
             InitializeComponent();
-            //Append.Foreground = Brushes.Red;
+            Conversion.Text = str;
         }
 
         internal new static void RequestBringIntoViewEvent()
@@ -33,14 +33,15 @@ namespace firstApp
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
-
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             PageTwo pageTwo = new PageTwo();
             NavigationService.Navigate(pageTwo);
-
+            
         }
+
+
     }
 }

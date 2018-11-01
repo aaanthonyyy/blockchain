@@ -19,12 +19,12 @@ namespace firstApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        HomePage homePage = new HomePage();
+
         public MainWindow()
         {
-            
             InitializeComponent();
-            HomePage homePage = new HomePage();
-            tutorialScreens.NavigationService.Navigate(homePage);
+            tutorialScreens.Navigate(homePage);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -34,9 +34,7 @@ namespace firstApp
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            HomePage homePage = new HomePage();
-
-            tutorialScreens.NavigationService.Navigate(homePage);
+            tutorialScreens.Navigate(homePage);
         }
     }
 }

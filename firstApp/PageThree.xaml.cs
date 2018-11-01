@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace firstApp
 {
     /// <summary>
-    /// Interaction logic for PageTwo.xaml
+    /// Interaction logic for PageThree.xaml
     /// </summary>
-    public partial class PageTwo : Page
+    public partial class PageThree : Page
     {
-        public PageTwo()
+        public PageThree()
         {
             InitializeComponent();
-            //Next.Visibility = Visibility.Hidden;
-            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -33,8 +31,7 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PageThree());
+            Next.Visibility = Visibility.Hidden;
         }
-
     }
 }

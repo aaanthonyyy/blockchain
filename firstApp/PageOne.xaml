@@ -107,5 +107,17 @@
 					Click="Next_Click"
 			/>
 		</Grid>
+
+		<Grid x:Name="NavBar" Height="5" VerticalAlignment="Top" Background="#FFB2B2B2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Canvas Grid.ColumnSpan="1" Background="#163042"/>
+		</Grid>
 	</Grid>
 </Page>

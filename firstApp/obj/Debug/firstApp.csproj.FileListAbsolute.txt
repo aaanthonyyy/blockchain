@@ -22,3 +22,5 @@ C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\bin\Debu
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\bin\Debug\firstApp.application
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.exe.manifest
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.application
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageThree.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageThree.baml

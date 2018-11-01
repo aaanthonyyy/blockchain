@@ -26,8 +26,11 @@
 		</Grid.RowDefinitions>
 
 		<Frame x:Name="tutorialScreens" Grid.Column="1"
-			   Grid.Row="0" Grid.RowSpan="3" NavigationUIVisibility="Hidden"
-			   />
+			   Grid.Row="0" Grid.RowSpan="3" NavigationUIVisibility="Hidden">
+
+		</Frame>
+
+
 
 		<Rectangle Grid.Column="0" 
 				   Grid.Row="1"
@@ -90,5 +93,6 @@
 				   
 				   Padding="30"
 				   />
+		
 	</Grid>
 </Window>
