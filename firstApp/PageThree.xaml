@@ -5,86 +5,96 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:firstApp"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="700"
       Title="PageThree">
 
-    <Grid>
-		<Grid Background="WhiteSmoke">
+	<Grid Background="WhiteSmoke">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+
+		<TextBlock Text="Step 3" 
+				   FontSize="35" 
+				   FontWeight="Black"
+				   HorizontalAlignment="Center" 
+				   Margin="30" 
+				   VerticalAlignment="Top"/>
+
+
+
+		<Grid>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 
 			<Grid.RowDefinitions>
 				<RowDefinition Height="2*"/>
-				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="25"/>
+				<RowDefinition Height="3*"/>
 			</Grid.RowDefinitions>
 
-
-			<TextBlock Text="Step 3" HorizontalAlignment="Center" FontSize="35" FontWeight="Black"
-				   Margin="30" VerticalAlignment="Top"/>
-
-
-
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="*"/>
-				</Grid.ColumnDefinitions>
-
-				<Grid.RowDefinitions>
-					<RowDefinition Height="*"/>
-					<RowDefinition Height="2*"/>
-				</Grid.RowDefinitions>
-
-
-
-				<TextBlock x:Name="InputData" Grid.Row="1" Text="The first step converts each character to ascii"
+			<TextBlock x:Name="InputData" Grid.Row="1"
+					   TextWrapping="WrapWithOverflow"
+					   TextAlignment="Center"
+					   Text="Zeros are padded to make the message equal to 448 mod 512"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Top"
 					   Background="#FFE6E6E6"
-					   Padding="40"
-					   FontSize="20" Foreground="#FF19384D"/>
+					   Padding="20"
+					   FontSize="18" Foreground="#FF19384D"
+					   
+				/>
 
-			</Grid>
 
-			<WrapPanel x:Name="StepOne" 
-				   VerticalAlignment="Bottom" HorizontalAlignment="Center"
-					Grid.Column="0" Grid.Row="0" Margin="0">
 
-				<TextBlock x:Name="Conversion"
+			<ScrollViewer Grid.Row="3">
+
+				<TextBlock x:Name="sWord"
+					   Padding="30 0 28 0"
 					   Text="{Binding}"
 					   Grid.Column="0"
-					   Grid.Row="1"
-					   Foreground="Black" FontSize="24"
+					   Grid.Row="3"
+					   Foreground="Black" FontSize="20"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Center" 
 					   TextAlignment="Center"
-					   FontWeight="Bold" TextWrapping="Wrap"
+					   FontWeight="Bold" TextWrapping="Wrap" 
+					   Cursor="IBeam"
 					   />
+			</ScrollViewer>
 
-				<TextBlock x:Name="Append"
-					   Grid.Column="0"
+			<TextBlock x:Name="Append"
+					   VerticalAlignment="Top"
+					   Grid.Column="2"
 					   Grid.Row="1"
-					   Text="1" FontSize="24"
+					   Text="{Binding}" FontSize="24"
 					   Foreground="Black"
 					   HorizontalAlignment="Center"
-					   VerticalAlignment="Center"
 					   TextAlignment="Center"
 					   FontWeight="Bold" TextWrapping="Wrap"
 					   />
-			</WrapPanel>
 
-			<Grid Margin="30 20 30 30" Grid.Row="1">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="127*"/>
-					<ColumnDefinition Width="auto"/>
-					<ColumnDefinition Width="32*"/>
-					<ColumnDefinition Width="auto"/>
-					<ColumnDefinition Width="127*"/>
-				</Grid.ColumnDefinitions>
+		</Grid>
+
+		<Grid Margin="30 30 30 30" Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="127*"/>
+				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition Width="32*"/>
+				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition Width="127*"/>
+			</Grid.ColumnDefinitions>
 
 
 
-				<Button Content="Back"
+			<Button Content="Back"
 						Grid.Column="1"
 						x:Name="Back"
 						VerticalAlignment="Bottom" 
@@ -94,7 +104,7 @@
 						Cursor="Hand"
 				Background="#FF234F6E" BorderBrush="#FF1F445F" Click="Back_Click"/>
 
-				<Button Content="Next" 
+			<Button Content="Next" 
 				x:Name="Next"
 				 Grid.Column="3"
 				HorizontalAlignment="Center" 
@@ -104,19 +114,23 @@
 				TextOptions.TextHintingMode="Animated" 
 				Foreground="White" 
 				Cursor="Hand"
-				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" Click="Next_Click"/>
-			</Grid>
+				Background="#FF234F6E" 
+					BorderThickness="1" 
+					BorderBrush="#FF1F445F"
+					Click="Next_Click" 
+					IsHitTestVisible="True"/>
+		</Grid>
 
-			<Grid x:Name="NavBar" Height="5" VerticalAlignment="Top" Background="#FFB2B2B2">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-				</Grid.ColumnDefinitions>
-				<Canvas Grid.ColumnSpan="3" Background="#163042"/>
-			</Grid>
+		<Grid x:Name="NavBar" Height="5" VerticalAlignment="Top" Background="#FFB2B2B2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Canvas Grid.ColumnSpan="3" Background="#163042"/>
 		</Grid>
 	</Grid>
 </Page>

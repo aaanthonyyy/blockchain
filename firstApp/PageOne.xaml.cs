@@ -19,10 +19,17 @@ namespace firstApp
     /// </summary>
     public partial class PageOne : Page
     {
-        public PageOne(string str)
+        public List<ulong> message_block { get; set; }
+        public string passStr { set; get; }
+        Hasher h = new Hasher();
+
+        public PageOne(string str, List<ulong> message)
         {
+            message_block = message;
+            passStr = str;
             InitializeComponent();
-            Conversion.Text = str;
+            
+            Conversion.Text = h.Padding(message_block);
         }
 
         internal new static void RequestBringIntoViewEvent()
@@ -37,9 +44,8 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            PageTwo pageTwo = new PageTwo();
-            NavigationService.Navigate(pageTwo);
-            
+            message_block = h.Store_input(passStr);
+            NavigationService.Navigate(new PageTwo(message_block));
         }
 
 

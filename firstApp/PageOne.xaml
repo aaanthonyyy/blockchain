@@ -15,8 +15,8 @@
 		</Grid.ColumnDefinitions>
 
 		<Grid.RowDefinitions>
-			<RowDefinition Height="2*"/>
-			<RowDefinition Height="*"/>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 
 		<!--Image Source="resources\StepOne.jpg" Margin="35" Stretch="Uniform"/-->
@@ -30,24 +30,25 @@
 			</Grid.ColumnDefinitions>
 
 			<Grid.RowDefinitions>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="2*"/>
+				<RowDefinition Height="100"/>
+				<RowDefinition Height="11*"/>
+				<RowDefinition Height="14*"/>
 			</Grid.RowDefinitions>
 
 			<TextBlock x:Name="InputData" Grid.Row="1" 
-					   Text="The first step converts each character to ascii"
+					   Text="The first step converts each character to binary,&#10;and a 1 is concatenated to the end. "
+					   TextAlignment="Center"
 					   Background="#FFE6E6E6"
 					   Foreground="#FF19384D"
-					   Padding="40"
+					   Padding="20"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Top"
-					   FontSize="20"
+					   FontSize="18"
 			/>
-		</Grid>
 
 		<WrapPanel x:Name="StepOne" 
-				   VerticalAlignment="Bottom" HorizontalAlignment="Center"
-					Grid.Column="0" Grid.Row="0" Margin="0">
+				   VerticalAlignment="Center" HorizontalAlignment="Center"
+					Grid.Column="0" Grid.Row="2" Margin="0">
 
 			<TextBlock x:Name="Conversion"
 					   Text="{Binding}"
@@ -71,8 +72,9 @@
 					   FontWeight="Bold" TextWrapping="Wrap"
 			/>
 		</WrapPanel>
+		</Grid>
 
-		<Grid Margin="30" Grid.Row="1">
+		<Grid Margin="30 30 30 30" Grid.Row="1">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="127*"/>
 				<ColumnDefinition Width="auto"/>

@@ -19,9 +19,17 @@ namespace firstApp
     /// </summary>
     public partial class PageThree : Page
     {
-        public PageThree()
+        public List<ulong> message { get; set; }
+
+        public PageThree(List<ulong> message_block)
         {
             InitializeComponent();
+
+            Hasher h = new Hasher();
+            message_block = h.Resize_block(message_block);
+
+
+            sWord.Text = h.Word(message_block, 17);
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

@@ -19,11 +19,14 @@ namespace firstApp
     /// </summary>
     public partial class PageTwo : Page
     {
-        public PageTwo()
+        public List<ulong> message { get; set; }
+
+        public PageTwo(List<ulong> message_block)
         {
             InitializeComponent();
-            //Next.Visibility = Visibility.Hidden;
-            
+            Hasher h = new Hasher();
+            message_block = h.Pad_to_512bits(message_block);
+            Padding.Text = h.Padding(message_block);
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -33,7 +36,7 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PageThree());
+            NavigationService.Navigate(new PageThree(message));
         }
 
     }

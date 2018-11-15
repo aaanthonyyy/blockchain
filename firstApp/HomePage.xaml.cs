@@ -19,25 +19,38 @@ namespace firstApp
     /// </summary>
     public partial class HomePage : Page
     {
+        public string PassStr { get; set; }
+
+        Hasher h = new Hasher();
+        List<ulong> message_block = new List<ulong>();
+
         public HomePage()
         {
             InitializeComponent();
+
             PassStr = Input.Text;
         }
 
-        string PassStr { get; set; }
 
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
-            Random rand = new Random();
-            string rnd = rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString() + rand.Next(999999999).ToString();
-            string str = rnd.ToString();
+            if (hash == null) return;
+            PassStr  = Input.Text;
+
+            message_block = (h.Store_input(PassStr));
+            message_block = h.Pad_to_512bits(message_block);
+            message_block = h.Resize_block(message_block);
+
+            string str = h.Compute_hash(message_block);
+
             hash.Text = str;
         }
 
         private void Tutorial_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new PageOne(PassStr));
+
+
+            this.NavigationService.Navigate(new PageOne(PassStr, message_block));
         }
 
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
