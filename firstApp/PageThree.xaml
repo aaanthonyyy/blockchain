@@ -34,7 +34,7 @@
 			</Grid.ColumnDefinitions>
 
 			<Grid.RowDefinitions>
-				<RowDefinition Height="53*"/>
+				<RowDefinition Height="70*"/>
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="70*"/>
 			</Grid.RowDefinitions>
@@ -42,11 +42,11 @@
 			<TextBlock x:Name="InputData" Grid.Row="1"
 					   TextWrapping="WrapWithOverflow"
 					   TextAlignment="Center"
-					   Text="6 x 32 character bit words into 80 words using a step loop function.&#xA;Seventeenth word is then found"
+					   Text="Hash functions are run on  64 × 32 bit words and&#xA; generates 64 words required for &#xA;hash computation. &#xA;Seventeenth word is shown below"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Top"
 					   Background="#FFE6E6E6"
-					   Padding="20"
+					   Padding="15"
 					   FontSize="18" Foreground="#FF19384D"
 					   
 				/>

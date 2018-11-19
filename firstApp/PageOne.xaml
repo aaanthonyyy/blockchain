@@ -36,7 +36,7 @@
 			</Grid.RowDefinitions>
 
 			<TextBlock x:Name="InputData" Grid.Row="1" 
-					   Text="The first step converts each character to binary,&#10;and a 1 is concatenated to the end. "
+					   Text="The first step converts each character to binary,&#10;and a 1 is appended to the end."
 					   TextAlignment="Center"
 					   Background="#FFE6E6E6"
 					   Foreground="#FF19384D"
