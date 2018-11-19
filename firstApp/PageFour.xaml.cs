@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace firstApp
 {
     /// <summary>
-    /// Interaction logic for PageThree.xaml
+    /// Interaction logic for PageFour.xaml
     /// </summary>
-    public partial class PageThree : Page
+    public partial class PageFour : Page
     {
-        public List<ulong> message { get; set; }
-
-        public PageThree(List<ulong> message_block)
+        public PageFour()
         {
             InitializeComponent();
-            Hasher h = new Hasher();
-
-            message = message_block;
-            message_block = h.Resize_block(message_block);
-            sWord.Text = h.Word(message_block, 17);
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -38,7 +31,7 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PageFour());
+
         }
     }
 }

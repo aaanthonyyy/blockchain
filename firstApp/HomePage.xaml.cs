@@ -20,9 +20,9 @@ namespace firstApp
     public partial class HomePage : Page
     {
         public string PassStr { get; set; }
-
+        public List<ulong> message { get; set; }
+        public List<ulong> message_block = new List<ulong>();
         Hasher h = new Hasher();
-        List<ulong> message_block = new List<ulong>();
 
         public HomePage()
         {
@@ -41,16 +41,15 @@ namespace firstApp
             message_block = h.Pad_to_512bits(message_block);
             message_block = h.Resize_block(message_block);
 
-            string str = h.Compute_hash(message_block);
 
-            hash.Text = str;
+            hash.Text = h.Compute_hash(message_block);
+
         }
 
         private void Tutorial_Click(object sender, RoutedEventArgs e)
         {
-
-
-            this.NavigationService.Navigate(new PageOne(PassStr, message_block));
+           message = message_block;
+           NavigationService.Navigate(new PageOne(PassStr, message));
         }
 
         private void Input_TextChanged(object sender, TextChangedEventArgs e)

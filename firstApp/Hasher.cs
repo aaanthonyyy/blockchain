@@ -91,7 +91,6 @@ namespace firstApp
 
         public List<ulong> Pad_to_512bits(List<ulong> block)
         {
-
             int l = block.Count * 8;
             block.Add(128);
 
@@ -305,14 +304,14 @@ namespace firstApp
             // Working Variables as per the specification
            ulong temp1;
            ulong temp2;
-           ulong a = (ulong)H0;
-           ulong b = (ulong)H1;
-           ulong c = (ulong)H2;
-           ulong d = (ulong)H3;
-           ulong e = (ulong)H4;
-           ulong f = (ulong)H5;
-           ulong g = (ulong)H6;
-           ulong h = (ulong)H7;
+           ulong a = H0;
+           ulong b = H1;
+           ulong c = H2;
+           ulong d = H3;
+           ulong e = H4;
+           ulong f = H5;
+           ulong g = H6;
+           ulong h = H7;
 
             for (int i = 0; i < 64; i++)
             {
@@ -321,21 +320,21 @@ namespace firstApp
                 h = g;
                 g = f;
                 f = e;
-                e = (ulong)(d + temp1);
+                e = (d + temp1);
                 d = c;
                 c = b;
                 b = a;
-                a = (ulong)(temp1 + temp2);
+                a = (temp1 + temp2);
             }
 
-            H0 = (ulong)(H0 + a);
-            H1 = (ulong)(H1 + b);
-            H2 = (ulong)(H2 + c);
-            H3 = (ulong)(H3 + d);
-            H4 = (ulong)(H4 + e);
-            H5 = (ulong)(H5 + f);
-            H6 = (ulong)(H6 + g);
-            H7 = (ulong)(H7 + h);
+            H0 = (H0 + a);
+            H1 = (H1 + b);
+            H2 = (H2 + c);
+            H3 = (H3 + d);
+            H4 = (H4 + e);
+            H5 = (H5 + f);
+            H6 = (H6 + g);
+            H7 = (H7 + h);
 
 
             return Show_as_hex(H0) + Show_as_hex(H1) + Show_as_hex(H2) + Show_as_hex(H3) + Show_as_hex(H4) + Show_as_hex(H5) + Show_as_hex(H6) + Show_as_hex(H7);

@@ -24,3 +24,5 @@ C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debu
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\firstApp.application
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageThree.g.cs
 C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageThree.baml
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageFour.g.cs
+C:\Users\7240Lat\Documents\Visual Studio 2017\Projects\C-Sharp\firstApp\obj\Debug\PageFour.baml

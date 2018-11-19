@@ -24,9 +24,11 @@ namespace firstApp
         public PageTwo(List<ulong> message_block)
         {
             InitializeComponent();
+
             Hasher h = new Hasher();
             message_block = h.Pad_to_512bits(message_block);
             Padding.Text = h.Padding(message_block);
+            message = message_block;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

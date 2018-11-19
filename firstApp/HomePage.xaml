@@ -85,7 +85,7 @@
 				   TextAlignment="Center"
 				   VerticalAlignment="Center" 
 				   FontWeight="Bold" TextWrapping="Wrap"
-				   FontSize="16" Margin="0,-50,0,0"
+				   FontSize="16" Margin="0,-50,0,0" Cursor="IBeam"
 				   />
 
 		</StackPanel>
