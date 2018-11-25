@@ -36,11 +36,16 @@ namespace firstApp
             NavigationService.GoBack();
         }
 
-        private void Next_Click(object sender, RoutedEventArgs e)
+        private void Next2_Click(object sender, RoutedEventArgs e)
         {
+            Next2.Visibility = Visibility.Hidden;
             InputData.Text = "64 bit representation of l is then appended to the end";
-            NavigationService.Navigate(new PageThree(message));
         }
 
+        private void Next1_Click(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new PageThree(message));
+        }
     }
 }

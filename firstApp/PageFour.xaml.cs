@@ -26,9 +26,6 @@ namespace firstApp
             InitializeComponent();
             message = message_block;
 
-
-
-
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -38,7 +35,7 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PageFive());
+            NavigationService.Navigate(new PageFive(message));
         }
     }
 }

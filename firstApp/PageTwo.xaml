@@ -34,10 +34,10 @@
 			</Grid.ColumnDefinitions>
 
 			<Grid.RowDefinitions>
-				<RowDefinition Height="3*"/>
+				<RowDefinition Height="106"/>
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="30"/>
-				<RowDefinition Height="3*"/>
+				<RowDefinition/>
 			</Grid.RowDefinitions>
 
 			<TextBlock x:Name="InputData" Grid.Row="1"
@@ -52,7 +52,7 @@
 					   />
 
 			<ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
-					
+
 				<TextBlock x:Name="Padding"
 					   Padding="31 0 28 0"
 					   Text="{Binding Desired, Mode=OneWay}"
@@ -67,7 +67,7 @@
 			    />
 			</ScrollViewer>
 
-				<TextBlock x:Name="Append"
+			<TextBlock x:Name="Append"
 					   VerticalAlignment="Top"
 					   Grid.Column="2"
 					   Grid.Row="1"
@@ -101,7 +101,7 @@
 				Background="#FF234F6E" BorderBrush="#FF1F445F" Click="Back_Click"/>
 
 			<Button Content="Next" 
-				x:Name="Next"
+				x:Name="Next1"
 				 Grid.Column="3"
 				HorizontalAlignment="Center" 
 				VerticalAlignment="Bottom" 
@@ -110,7 +110,21 @@
 				TextOptions.TextHintingMode="Animated" 
 				Foreground="White" 
 				Cursor="Hand"
-				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" Click="Next_Click" IsHitTestVisible="True"/>
+				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" Click="Next1_Click" IsHitTestVisible="True"/>
+
+			<Button Content="Next" 
+				x:Name="Next2"
+				 Grid.Column="3"
+				HorizontalAlignment="Center" 
+				VerticalAlignment="Bottom" 
+				Width="128" 
+				FontSize="28" FontFamily="Champagne &amp; Limousines" 
+				TextOptions.TextHintingMode="Animated" 
+				Foreground="White" 
+				Cursor="Hand"
+				Background="#FF234F6E" BorderThickness="1" BorderBrush="#FF1F445F" Click="Next2_Click" IsHitTestVisible="True"/>
+
+
 		</Grid>
 
 		<Grid x:Name="NavBar" Height="5" VerticalAlignment="Top" Background="#FFB2B2B2">

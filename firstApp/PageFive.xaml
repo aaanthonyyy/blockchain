@@ -34,15 +34,16 @@
 			</Grid.ColumnDefinitions>
 
 			<Grid.RowDefinitions>
-				<RowDefinition Height="70*"/>
+				<RowDefinition Height="100"/>
 				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="70*"/>
+				<RowDefinition/>
 			</Grid.RowDefinitions>
 
-			<TextBlock x:Name="InputData" Grid.Row="1"
+			<TextBlock x:Name="HashComp" Grid.Row="1"
+					   Margin="0 0 0 20"
 					   TextWrapping="WrapWithOverflow"
 					   TextAlignment="Center"
-					   Text="Hash functions are run on  64 × 32 bit words and&#xA; generates 64 words required for &#xA;hash computation. &#xA;Seventeenth word is shown below"
+					   Text="The blocks are run through set functions&#10; for 64 times giving 8 new variables&#10;which are concatenated to give the final hash "
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Top"
 					   Background="#FFE6E6E6"
@@ -53,20 +54,72 @@
 
 
 
-			<ScrollViewer Grid.Row="2">
+			<ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+				<Grid Margin="40 0 40 0" VerticalAlignment="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "*"/>
+					</Grid.RowDefinitions>
 
-				<TextBlock x:Name="sWord"
-					   Padding="30 0 28 0"
-					   Text="{Binding}"
-					   Grid.Column="0"
-					   Grid.Row="3"
-					   Foreground="Black" FontSize="20"
-					   HorizontalAlignment="Center"
-					   VerticalAlignment="Center" 
-					   TextAlignment="Center"
-					   FontWeight="Bold" TextWrapping="Wrap" 
-					   Cursor="IBeam"
-					   />
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="29*"/>
+						<ColumnDefinition Width="4*"/>
+						<ColumnDefinition Width="29*"/>
+					</Grid.ColumnDefinitions>
+
+					<StackPanel Grid.Column="0" HorizontalAlignment="Right">
+						<TextBlock x:Name="H0"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+						<TextBlock x:Name="H2"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+						<TextBlock x:Name="H4"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+						<TextBlock x:Name="H6"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+					</StackPanel>
+
+					<StackPanel Grid.Column="2" HorizontalAlignment="Left">
+						<TextBlock x:Name="H1"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+						<TextBlock x:Name="H3"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+						<TextBlock x:Name="H5"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+						<TextBlock x:Name="H7"
+									TextWrapping="Wrap"
+								   Foreground="Black" FontSize="18" 
+								   FontWeight="Bold"
+								   Text="{Binding}"/>
+
+					</StackPanel>
+				</Grid>
 			</ScrollViewer>
 
 			<TextBlock x:Name="Append"

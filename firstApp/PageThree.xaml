@@ -34,9 +34,9 @@
 			</Grid.ColumnDefinitions>
 
 			<Grid.RowDefinitions>
-				<RowDefinition Height="70*"/>
+				<RowDefinition Height="114"/>
 				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="70*"/>
+				<RowDefinition/>
 			</Grid.RowDefinitions>
 
 			<TextBlock x:Name="InputData" Grid.Row="1"
