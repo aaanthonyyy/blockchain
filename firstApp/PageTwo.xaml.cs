@@ -19,9 +19,9 @@ namespace firstApp
     /// </summary>
     public partial class PageTwo : Page
     {
-        public List<ulong> message { get; set; }
+        public List<uint> message { get; set; }
 
-        public PageTwo(List<ulong> message_block)
+        public PageTwo(List<uint> message_block)
         {
             InitializeComponent();
 
@@ -38,6 +38,7 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
+            InputData.Text = "64 bit representation of l is then appended to the end";
             NavigationService.Navigate(new PageThree(message));
         }
 

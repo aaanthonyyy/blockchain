@@ -85,6 +85,9 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageFive.xaml.cs">
+      <DependentUpon>PageFive.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageFour.xaml.cs">
       <DependentUpon>PageFour.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageFive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageFour.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

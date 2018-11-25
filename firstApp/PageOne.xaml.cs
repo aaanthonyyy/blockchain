@@ -19,17 +19,29 @@ namespace firstApp
     /// </summary>
     public partial class PageOne : Page
     {
-        public List<ulong> message_block { get; set; }
+        public List<uint> message_block { get; set; }
         public string passStr { set; get; }
         Hasher h = new Hasher();
 
-        public PageOne(string str, List<ulong> message)
+        public PageOne(string str, List<uint> message)
         {
+            
             message_block = message;
             passStr = str;
             InitializeComponent();
-            
-            Conversion.Text = h.Padding(message_block);
+
+            if(passStr.Length > 72)
+            {
+            ScrollViewer viewer = new ScrollViewer();
+            viewer.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            }
+
+            string result = "";
+
+            foreach (char c in str)
+                result += (Convert.ToString(c, 2).PadLeft(8, '0'));
+
+            Conversion.Text = result + 1;
         }
 
         internal new static void RequestBringIntoViewEvent()

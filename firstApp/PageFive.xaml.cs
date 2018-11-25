@@ -15,30 +15,23 @@ using System.Windows.Shapes;
 namespace firstApp
 {
     /// <summary>
-    /// Interaction logic for PageFour.xaml
+    /// Interaction logic for PageFive.xaml
     /// </summary>
-    public partial class PageFour : Page
+    public partial class PageFive : Page
     {
-        public List<uint> message { get; set; }
-
-        public PageFour(List<uint> message_block)
+        public PageFive()
         {
             InitializeComponent();
-            message = message_block;
+        }
 
-
-
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
-        }
-
-        private void Next_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new PageFive());
         }
     }
 }

@@ -19,15 +19,15 @@ namespace firstApp
     /// </summary>
     public partial class PageThree : Page
     {
-        public List<ulong> message { get; set; }
+        public List<uint> message { get; set; }
 
-        public PageThree(List<ulong> message_block)
+        public PageThree(List<uint> message_block)
         {
             InitializeComponent();
             Hasher h = new Hasher();
 
-            message = message_block;
             message_block = h.Resize_block(message_block);
+            message = message_block;
             sWord.Text = h.Word(message_block, 17);
         }
 
@@ -38,7 +38,7 @@ namespace firstApp
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PageFour());
+            NavigationService.Navigate(new PageFour(message));
         }
     }
 }

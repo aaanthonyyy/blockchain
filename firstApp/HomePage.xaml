@@ -81,7 +81,7 @@
 
 			<TextBlock x:Name="hash" 
 				   Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5"
-				   Text="B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9" 
+				   Text="5865641D5F6D6B3B3EF04FE24B314DDF78FC61F49470946DD32B45F0C380840E" 
 				   TextAlignment="Center"
 				   VerticalAlignment="Center" 
 				   FontWeight="Bold" TextWrapping="Wrap"

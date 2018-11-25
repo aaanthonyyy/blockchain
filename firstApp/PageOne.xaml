@@ -24,7 +24,8 @@
 		<TextBlock Text="Step 1" HorizontalAlignment="Center" FontSize="35" FontWeight="Black"
 				   Margin="30" VerticalAlignment="Top"/>
 
-		<Grid>
+		<Grid ScrollViewer.CanContentScroll="True"
+			  ScrollViewer.HorizontalScrollBarVisibility="Auto">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
@@ -48,30 +49,20 @@
 
 		<WrapPanel x:Name="StepOne" 
 				   VerticalAlignment="Center" HorizontalAlignment="Center"
-					Grid.Column="0" Grid.Row="2" Margin="0">
+				   Grid.Column="0" Grid.Row="2">
 
-			<TextBlock x:Name="Conversion"
+				<ScrollViewer VerticalScrollBarVisibility="Auto" Padding="20">
+					<TextBlock x:Name="Conversion"
 					   Text="{Binding}"
 					   Grid.Column="0"
 					   Grid.Row="1"
-					   Foreground="Black" FontSize="24"
+					   Foreground="Black" FontSize="20"
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Center" 
 					   TextAlignment="Center"
-					   FontWeight="Bold" TextWrapping="Wrap"
-			/>
-
-			<TextBlock x:Name="Append"
-					   Grid.Column="0"
-					   Grid.Row="1"
-					   Text="1" FontSize="24"
-					   Foreground="Black"
-					   HorizontalAlignment="Center"
-					   VerticalAlignment="Center"
-					   TextAlignment="Center"
-					   FontWeight="Bold" TextWrapping="Wrap"
-			/>
-		</WrapPanel>
+					   FontWeight="Bold" TextWrapping="Wrap"/>
+				</ScrollViewer>
+			</WrapPanel>
 		</Grid>
 
 		<Grid Margin="30 30 30 30" Grid.Row="1">

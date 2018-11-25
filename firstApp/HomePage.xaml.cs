@@ -20,8 +20,8 @@ namespace firstApp
     public partial class HomePage : Page
     {
         public string PassStr { get; set; }
-        public List<ulong> message { get; set; }
-        public List<ulong> message_block = new List<ulong>();
+        public List<uint> message { get; set; }
+        public List<uint> message_block = new List<uint>();
         Hasher h = new Hasher();
 
         public HomePage()
@@ -34,16 +34,8 @@ namespace firstApp
 
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
-            if (hash == null) return;
-            PassStr  = Input.Text;
-
-            message_block = (h.Store_input(PassStr));
-            message_block = h.Pad_to_512bits(message_block);
-            message_block = h.Resize_block(message_block);
-
-
-            hash.Text = h.Compute_hash(message_block);
-
+            Clipboard.SetText(hash.Text);
+            MessageBoxResult result = MessageBox.Show("Hash Copied to Clipboard");
         }
 
         private void Tutorial_Click(object sender, RoutedEventArgs e)
@@ -55,7 +47,15 @@ namespace firstApp
         private void Input_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (hash == null) return;
-            Generate_Click(null, null);
+            PassStr = Input.Text;
+
+            message_block = (h.Store_input(PassStr));
+            message_block = h.Pad_to_512bits(message_block);
+            message_block = h.Resize_block(message_block);
+
+
+            hash.Text = h.Compute_hash(message_block);
+
             PassStr = Input.Text;
         }
     }
